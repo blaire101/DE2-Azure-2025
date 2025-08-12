@@ -288,8 +288,9 @@ flowchart LR
 
 ---
 
-### Notes（实践提示）
-- **推荐架构**：ADLS（Raw→Staging→Curated）＋ Databricks（Transform）＋ Synapse（Serving）＋ Purview（治理）＋ ADF／Synapse Pipelines（编排）。  
-- **成本控制**：Serverless SQL 做探索；Dedicated SQL Pool 仅承载稳定报表；Databricks 使用工作区自动终止。  
-- **权限治理**：以 Purview 为目录源，结合 RBAC ＋ ACL，数据共享用 Delta Sharing 或 Power BI 数据集。
+### Notes (Practical Tips)
+
+- **Recommended architecture**: ADLS (Raw → Staging → Curated) + Databricks (Transform) + Synapse (Serving) + Purview (Governance) + ADF/Synapse Pipelines (Orchestration).
+- **Cost control**: Use Serverless SQL for exploration; use Dedicated SQL Pool only for stable reporting; enable auto-termination for Databricks workspaces.
+- **Access governance**: Use Purview as the catalog source, combined with R...
 
